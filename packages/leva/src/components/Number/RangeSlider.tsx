@@ -26,7 +26,7 @@ export function RangeSlider({ value, min, max, onDrag, step, initialValue }: Ran
         setPreviousValue(initialValue)
       }
       // 1 scroll = memo = 1 step
-      console.log({ previousValue: previousValue.toFixed(2), memo: memo, my: my.toFixed(2) })
+      // console.log({ previousValue: previousValue.toFixed(2), memo: memo, my: my.toFixed(2) })
       const newValue = Math.max(Math.min(previousValue + ((my + memo) / 1000) * -1 * step, max), min)
       setPreviousValue(newValue)
       onDrag(sanitizeStep(newValue, { step, initialValue }))
